@@ -20,7 +20,7 @@ public class Endpoint {
     @GetMapping("/hallo")
     public Mono<String> getDelayedEcho() {
         LOGGER.info("call /hallo " + counter.incrementAndGet());
-        return Mono.just("Echo").delayElement(ofMillis(200));
+        return Mono.just("Echo").delayElement(ofMillis(1000));
     }
 
 
